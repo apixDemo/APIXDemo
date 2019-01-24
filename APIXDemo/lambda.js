@@ -46,6 +46,19 @@ exports.handler = function (event, context, callback) {
             });
         }
 
+        if (event.method == "getAccount") {
+            Swagger.http({
+                url: `https://api.apixplatform.com/sbaccount/1.0/AccountService/accounts/accounts/account/${event.accountNumber}`,
+                method: 'get',
+                query: {},
+                headers: { "X-Authorization": access_token, "Accept": "*/*" }
+            }).then((response) => {
+                callback(null, response.body);
+            }).catch((err) => {
+                console.log(err);
+            });
+        }
+
     }).catch((err) => {
         console.log(err);
         callback("Execution failed");
