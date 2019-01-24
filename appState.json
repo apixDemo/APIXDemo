@@ -40,6 +40,12 @@
             "name": "Unnamed event",
             "functionId": "ea7ce806-1036-497b-8242-395c9c1f1c81",
             "event": "{ \"method\": \"createAccount\", \"account\": {\n\t\"accountClosingDate\": \"2019-01-20T12:21:50.659Z\",\n\t\"accountCurrency\": \"USD\",\n\t\"accountName\": \"ME\",\n\t\"accountOpeningDate\": \"2019-01-20T12:21:50.659Z\",\n\t\"accountTypeId\": 1001,\n\t\"accountrefnumber\": \"string\",\n\t\"balance\": 0,\n\t\"bankId\": 1001,\n\t\"branchId\": 1000001,\n\t\"cardFacility\": \"Y\",\n\t\"checkerDate\": \"2019-01-20T12:21:50.659Z\",\n\t\"checkerId\": \"string\",\n\t\"chequebookFacility\": \"Y\",\n\t\"creditDebitIndicator\": \"Credit\",\n\t\"creditLineAmount\": 0,\n\t\"creditLineIncluded\": \"N\",\n\t\"creditLineType\": \"Emergency\",\n\t\"frozen\": \"Y\",\n\t\"isjointaccount\": \"N\",\n\t\"isonlineaccessenabled\": \"Y\",\n\t\"makerDate\": \"2019-01-20T12:21:50.659Z\",\n\t\"makerId\": \"string\",\n\t\"modifiedDate\": \"2019-01-20T12:21:50.659Z\",\n\t\"nickname\": \"string\",\n\t\"noCredit\": \"Y\",\n\t\"noDebit\": \"N\",\n\t\"nomineeAddress\": \"string\",\n\t\"nomineeDob\": \"2019-01-20T12:21:50.659Z\",\n\t\"nomineeName\": \"string\",\n\t\"nomineePhoneNo\": \"string\",\n\t\"nomineeRelatonship\": \"string\",\n\t\"passbookFacility\": \"Y\",\n\t\"productId\": 1001,\n\t\"schemeName\": \"IBAN\",\n\t\"status\": \"string\",\n\t\"typeOfBalance\": \"ClosingAvailable\",\n\t\"usage\": \"Y\"\n} }"
+          },
+          "435ed40e-edae-47b7-a0a3-75f15ded8e32": {
+            "id": "435ed40e-edae-47b7-a0a3-75f15ded8e32",
+            "name": "Unnamed event",
+            "functionId": "ea7ce806-1036-497b-8242-395c9c1f1c81",
+            "event": "{\n    \"method\": \"getAccount\",\n    \"accountNumber\": \"10061286474341\"\n}"
           }
         }
       }
@@ -98,7 +104,7 @@
     "projectRegion": "eu-central-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1548349791863
+    "lastSave": 1548352174123
   },
   "VCS_STATE": {
     "provider": "GitHub",
