@@ -14,8 +14,9 @@ exports.handler = function (event, context, callback) {
             "password": "1qaz2wsx@"
         })
 
+
     }).then((response) => {
-        
+
         var access_token = "bearer " + response.body.access_token;
 
         if (event.method == "getBanks") {
@@ -62,6 +63,17 @@ exports.handler = function (event, context, callback) {
     }).catch((err) => {
         console.log(err);
         callback("Execution failed");
+    });
+    Swagger.http({
+        url: `https://api.apixplatform.com/facematch/1.0/v1/photo/verifyPair`,
+        method: 'post',
+        query: {},
+        headers: { "appId": "123", "appKey": "123", "X-Authorization": "bearer authtoken", "Accept": "application/json", "Content-Type": "application/x-www-form-urlencoded" },
+        body: `image1=image.png&image2=image.png&type=png`
+    }).then((response) => {
+        // your code goes here
+    }).catch((err) => {
+        // error handling goes here
     });
 
 }
