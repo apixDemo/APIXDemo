@@ -16,7 +16,7 @@ exports.handler = function (event, context, callback) {
 
 
     }).then((response) => {
-
+        console.log(response.body.access_token)
         var access_token = "bearer " + response.body.access_token;
 
         if (event.method == "getBanks") {
