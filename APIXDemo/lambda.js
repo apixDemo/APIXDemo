@@ -60,6 +60,18 @@ exports.handler = function (event, context, callback) {
             });
         }
 
+        Swagger.http({
+            url: `https://api.apixplatform.com/sbbank/1.0/BanksService/banks/banks`,
+            method: 'get',
+            query: { "page": "0", "size": "1" },
+            headers: { "X-Authorization": access_token, "Accept": "*/*" }
+        }).then((response) => {
+            // your code goes here
+        }).catch((err) => {
+            // error handling goes here
+        });
+
+
     }).catch((err) => {
         console.log(err);
         callback("Execution failed");
