@@ -16,7 +16,6 @@ exports.handler = function (event, context, callback) {
 
 
     }).then((response) => {
-        console.log(response.body.access_token)
         var access_token = "bearer " + response.body.access_token;
 
         if (event.method == "getBanks") {
@@ -34,7 +33,7 @@ exports.handler = function (event, context, callback) {
 
         if (event.method == "createAccount") {
             Swagger.http({
-                url: `https://api.apixplatform.com/sbaccount/1.0/AccountService/accounts/accounts`,
+                url: `https://api.apixplatform.com/sbaccount/1.0/account/accounts/accounts`,
                 method: 'post',
                 query: {},
                 headers: { "X-Authorization": access_token, "Content-Type": "application/json" },
@@ -49,7 +48,7 @@ exports.handler = function (event, context, callback) {
 
         if (event.method == "getAccount") {
             Swagger.http({
-                url: `https://api.apixplatform.com/sbaccount/1.0/AccountService/accounts/accounts/account/${event.accountNumber}`,
+                url: `https://api.apixplatform.com/sbaccount/1.0/account/accounts/accounts/account/${event.accountNumber}`,
                 method: 'get',
                 query: {},
                 headers: { "X-Authorization": access_token, "Accept": "*/*" }
